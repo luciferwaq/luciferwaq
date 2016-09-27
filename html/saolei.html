@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.wrap{
+			height: 450px;
+			width: 450px;
+			border: 1px solid #000;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.wrap div{
+			width: 48px;
+			height: 48px;
+			border: 1px solid #000;
+			float: left;
+			line-height: 48px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+	</div>
+	<script>
+		var outer = document.getElementsByClassName('wrap')[0];
+		var oall = outer.getElementsByTagName('div');
+		var aa = [];
+		var bb = [];
+		var cc = [];
+		var arr = new Array(11);
+		var num;
+		function rand (min,max) {
+			return Math.floor(Math.random()*(max-min+1)+min);
+		}
+		function init () {
+			num = 0;
+			aa = [];
+			bb = [];
+			cc = [];
+			outer.innerHTML = "";
+			arr = new Array(11);
+			for (var i = 0; i < 11; i++) {
+				arr[i] = [];
+				for (var j = 0; j < 11; j++) {
+					arr[i].push(0);
+				};
+			};
+			for (var i = 1; i <10; i++) {
+				for (var j = 1; j <10; j++) {
+					var ele = document.createElement("div");
+					ele.id = i+""+j;
+					outer.appendChild(ele);
+				}
+			}		
+			for (var i = 0; i < 10; i++) {
+				var fir = rand(1,9);
+				var sec = rand(1,9);
+				while(arr[fir][sec] == "x"){
+					var fir = rand(1,9);
+					var sec = rand(1,9);
+				}
+				arr[fir][sec] = "x";
+			}
+			for (var i = 1; i < 10; i++) {
+				for(var j = 1;j<10;j++){
+					if (arr[i][j]==0) {
+						var count = 0;
+						for (var k = i-1; k < i+2; k++) {
+							for (var l = j-1; l < j+2; l++) {
+								if (arr[k][l]=="x") {
+									count++;
+								}
+							}
+						}
+						arr[i][j]=count;
+					}
+				}
+			}
+		}
+		init();
+		outer.addEventListener("click",function (event) {
+			var target = event.target;
+			for (var i = 1; i < 10; i++) {
+				for(var j = 1;j<10;j++){
+					var num = i+""+j;
+					if (target.id==num) {
+						ocl(i,j);
+						zero(i,j);
+						end(i,j);
+						win();
+					}
+				}
+			}
+		},false)
+		outer.addEventListener("contextmenu",function (event) {
+			var target = event.target;
+			for (var i = 1; i < 10; i++) {
+				for(var j = 1;j<10;j++){
+					var num = i+""+j;
+					if (target.id==num) {
+						if (target.innerHTML=="") {
+							target.innerHTML = "M";
+							target.style.color = "red";
+							appendid(i,j);
+						}else if(target.innerHTML == "M"){
+							target.innerHTML = "";
+							target.style.color = "";
+							removeid(i,j);
+						}
+						win();
+					}
+				}
+			}
+			if(event.preventDefault){
+				event.preventDefault();
+			}else{
+				event.returnValue = false;
+			}
+		},false)
+		function zero(x,y){
+			aa.shift();
+			var i = x;
+			var j = y;
+			if (arr[i][j]==0&&i>0&&i<10&&j>0&&j<10) {
+				for (var k = i-1; k < i+2; k++) {
+					for (var l = j-1; l < j+2; l++) {
+						if(k>0&&k<10&&l>0&&l<10&&!(k==i&&l==j)){
+							if (equal(k,l)) {								
+								ocl(k,l);
+								if (arr[k][l]==0) {
+									var bb = [k,l];
+									aa.push(bb.slice());
+								}
+							}
+						}
+					}
+				}
+				if (aa[0]) {
+					zero(aa[0][0],aa[0][1]);
+				}
+			}else{
+				return;
+			}
+		}
+		function ocl(i,j) {
+			var ele = document.getElementById(i+""+j);
+			ele.style.color = "";
+			ele.innerHTML = arr[i][j];
+		}
+		function equal (i,j) {
+			var ele = document.getElementById(i+""+j);
+			if (ele.innerHTML=="") {
+				return true;
+			} else{
+				return false;
+			};
+		}
+		function end (i,j) {
+			if(arr[i][j]=="x"){
+				alert("game over");
+				init();
+			}
+		}
+		function win(){
+			if (cc.length==10&&allin()) {
+				for (var i = 0; i < cc.length; i++) {
+					if(arr[cc[i].id.slice(0,1)][cc[i].id.slice(1)]!="x"){
+						return;
+					}else{
+						alert("win");
+						init();
+					}
+				};
+			}
+		}
+		function appendid(i,j) {
+			var ele = document.getElementById(i+""+j);
+			cc.push(ele);
+		}
+		function removeid(i,j) {
+			var ele = document.getElementById(i+""+j);
+			cc.splice(cc.indexOf(ele),1);
+		}
+		function allin() {
+			for (var i = 1; i <10; i++) {
+				for (var j = 1; j < 10; j++) {
+					var ele = document.getElementById(i+""+j)
+					if (ele.innerHTML=="") {
+						return false;
+					};
+				};
+			}
+			return true;
+		}
+	</script>
+</body>
+</html>
