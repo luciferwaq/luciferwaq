@@ -1,0 +1,114 @@
+.wrap{
+	width: 985px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo{
+	padding: 20px 1px 0;
+	border-bottom: 2px solid #6e6e6e;
+	height: 106px;
+}
+.cont{
+	margin: 10px 0 20px;
+	border: 1px solid #cccccc;
+	overflow: hidden;
+	padding-bottom: 44px;
+}
+form{
+	float: left;
+	overflow: hidden;
+	padding:18px 0 0 30px;
+	width: 730px;
+}
+form h3{
+	font-size: 16px;
+	font-weight: normal;
+	border-bottom: 1px dotted #e6e6e6;
+	padding-left: 30px;
+	line-height: 32px;
+	color: #333;
+}
+form dl{
+	overflow: hidden;
+}
+form dl dt{
+	float: left;
+	width: 110px;
+	text-align: right;
+	line-height: 30px;
+	margin-top: 5px;
+	font-size: 14px;
+	color: #666;
+}
+form dl dd{
+	width: 590px;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+form dl dd input{
+	height: 28px;
+	width: 245px;
+	border: 1px solid #ababab;
+	float: left;
+	line-height: 28px;
+	font-size: 16px;
+}
+form dl dd.yan input{
+	width: 125px;
+}
+form dl dd.yan p{
+	color: #333;
+	line-height: 30px;
+}
+form dl dd.yan i{
+	font-size: 20px;
+	padding: 0 5px;
+	border: 1px solid #000;
+	font-style: normal;
+	display: block;
+	float: left;
+	width: 80px;
+	text-align: center;
+}
+form dl dd.yan span{
+	font-size: 16px;
+	padding-left: 5px;
+	cursor: pointer;
+}
+form dl dd p{
+	color: #999;
+	line-height: 20px;
+	width: 300px;
+	padding-left: 10px;
+	float: left;
+}
+#btn{
+	margin:0 0 10px 100px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	height: 35px;
+	line-height: 35px;
+	width: 215px;
+	background: url(../image/bg2.jpg);
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 5px;
+}
+form a{
+	text-decoration: underline;
+	line-height: 20px;
+	margin-left:100px;
+	color: #333;
+}
+.cont img{
+	float: right;
+}
+.footer{
+	text-align: center;
+}
+.footer a{
+	color: #000;
+}

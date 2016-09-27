@@ -1,0 +1,68 @@
+.logo{
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+}
+.logoin{
+	width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.logoin img.step{
+	float: right;
+}
+.cont{
+	margin: 0 auto;
+	width: 1200px;
+	overflow: hidden;
+}
+.cont h3{
+	line-height: 26px;
+	background: url(../image/bg5.jpg) no-repeat left center;
+	padding:20px 0 20px 35px;
+}
+.mini{
+	border: 1px solid #ccc;
+	padding:60px 0 70px 200px;
+}
+.mini ul{
+	overflow: hidden;
+}
+.mini li{
+	float: left;
+	line-height: 38px;
+	font-size: 14px;
+}
+.mini b{
+	font-size: 16px;
+}
+.mini span{
+	text-decoration: underline;
+	font-size: 16px;
+}
+.mini i{
+	font-style: normal;
+	font-size: 16px;
+	color: #f00;
+}
+.cont p{
+	line-height: 50px;
+}
+.cont dl{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.cont dl.fr{
+	border-bottom: 1px solid #9a9a9a;
+}
+.cont dl dt{
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.cont dl dd{
+	float: left;
+}
+.cont p a{
+	color: #000;
+	text-decoration: underline;
+}

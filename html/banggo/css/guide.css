@@ -1,0 +1,58 @@
+.cont{
+	margin: 0 auto;
+	width: 1200px;
+	overflow: hidden;
+}
+.cont h2{
+	font-weight: normal;
+	line-height: 40px;
+}
+.contl{
+	width: 188px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	padding-left: 10px;
+	float: left;
+}
+.contl dl{
+	line-height: 27px;
+}
+.contl dt{
+	background: #eee;
+	padding-left: 10px;
+	font-weight: bold;
+}
+.contl dd{
+	padding-left: 10px;
+	cursor: pointer;
+}
+.contl dd.active{
+	color: #f00;
+}
+.contr{
+	float: right;
+	margin-left: 15px;
+	overflow: hidden;
+	width: 963px;
+	padding: 0 10px;
+	border: 1px solid #ccc;
+}
+.contr h3{
+	line-height: 39px;
+	border-bottom: 1px solid #ccc;
+}
+.contr p{
+	line-height: 18px;
+	margin-top: 15px;
+}
+.contr p.las{
+	margin-top: 18px;
+	border-top: 1px dashed #ccc;
+	padding: 15px 0 10px;
+}
+.contr p.las a{
+	color: #000;
+}
+.contr p.las span{
+	float: right;
+}

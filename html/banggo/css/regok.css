@@ -1,0 +1,85 @@
+.wrap{
+	width: 985px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo{
+	padding: 20px 1px 0;
+	border-bottom: 2px solid #6e6e6e;
+	height: 106px;
+}
+.cont{
+	margin: 10px 0 20px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	padding-bottom: 44px;
+}
+.cont img.bang{
+	float: right;
+}
+.mini{
+	float: left;
+	overflow: hidden;
+	padding:18px 0 0 30px;
+	width: 730px;
+}
+.mini h3{
+	font-size: 16px;
+	font-weight: normal;
+	border-bottom: 1px dotted #e6e6e6;
+	padding-left: 30px;
+	line-height: 32px;
+	color: #333;
+}
+.mini dl{
+	overflow: hidden;
+	margin: 50px 40px 0 50px;
+	border-bottom: 1px dotted #e6e6e6;
+}
+.mini dl dt{
+	height: 170px;
+	float: left;
+	width: 67px;
+}
+.mini dl dd{
+	float: left;
+	padding-top: 10px;
+}
+.mini dl dd i{
+	font-style: normal;
+	font-size: 14px;
+}
+.mini dl dd span{
+	color: #f60;
+}
+.mini dl dd input{
+	width: 150px;
+	border: none;
+	background: url(../image/bg3.jpg);
+	height: 32px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 32px;
+	color: #fff;
+	font-weight: bold;
+}
+.mini p.done{
+	padding:45px 0 0 120px;
+	font-size: 14px;
+	line-height: 22px;
+	color: #666;
+}
+.mini p.done span a{
+	color: #f60;
+	line-height: 22px;
+}
+.mini p.done span img{
+	vertical-align: middle;
+}
+.footer{
+	text-align: center;
+}
+.footer a{
+	color: #000;
+}

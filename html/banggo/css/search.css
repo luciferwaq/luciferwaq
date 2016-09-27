@@ -1,0 +1,127 @@
+.search{
+	width: 1200px;
+	margin: 0 auto 10px;
+	overflow: hidden;
+}
+.bang{
+	float: left;
+}
+.searchword{
+	float: left;
+	margin: 22px 0 0 35px;
+	width: 900px;
+}
+.searchword p{
+	margin-left: 10px;
+	color: #e2dce2;
+	float: left;
+	line-height: 38px;
+}
+.searchword p a{
+	margin:0 7px;
+	color: #666666;
+}
+.searchword img{
+	vertical-align: middle;
+}
+.searchword span{
+	color: #d51819;
+}
+#txt{
+	width: 340px;
+	border: 3px solid #d51819;
+	height: 32px;
+	float: left;
+	padding: 0;
+}
+#btn{
+	padding: 0;
+	height: 38px;
+	width: 37px;
+	border: 3px solid #d51819;
+	float: left;
+	background: url(../image/pic3.jpg) no-repeat center center #d51819;
+}
+.navwrap{
+	width: 100%;
+	border-bottom: 3px solid #333333;
+}
+.nav{
+	width: 1200px;
+	margin: 0 auto;
+	height: 34px;
+}
+.nav img{
+	vertical-align: middle;
+}
+.nav li.ulfir{
+	width: 240px;
+	margin:0 5px 0 0;
+	position: relative;
+}
+.nav li{
+	margin: 0 15px;
+	font-size: 16px;
+	line-height: 32px;
+	float: left;
+	font-weight: bold;
+}
+.nav li.cal-last {
+	float: right;
+	margin-top: -6px;
+}
+.nav li a {
+	font-size: 16px;
+	color:#000;	font-weight: bold;
+}
+.nav li a span{
+	color: #f84646;
+	font-size: 16px;
+}
+.goods{
+	position: absolute;
+	left: 0;
+	top:34px;
+	padding: 7px 10px 0;
+	_padding-bottom:6px;
+	border: 1px solid #dcdcdc;
+	border-top: 3px solid #333333;
+	display: none;
+	background: #fff;
+	z-index: 100;
+}
+.secmenu{
+	width: 720px;
+	height: 528px;
+	display: block;
+	position: absolute;
+	left: 240px;
+	background: #fff;
+	top:0;
+	display: none;
+	z-index: 100;
+	border: 1px solid #000;
+}
+.goods dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.goods dt{
+	font-size: 14px;
+}
+.goods dt span{
+	float: right;
+	font-size: 14px;
+}
+.goods dd{
+	float: left;
+	margin-right: 16px;
+	line-height: 22px;
+}
+.goods dd a{
+	font-weight: normal;
+	font-size: 12px;
+}
+.goods dd a span{
+	font-size: 12px;
+}

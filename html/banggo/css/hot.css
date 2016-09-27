@@ -1,0 +1,38 @@
+.cont{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.cont h2{
+	line-height: 40px;
+	font-weight: normal;
+}
+.cont>ul{
+	border: 1px solid #cecece;
+	float: left;
+	width: 178px;
+}
+.cont>ul>li{
+	line-height: 36px;
+	padding-left: 20px;
+}
+.cont>ul>li>a{
+	color: #999999;
+}
+.cont>ul>li.active{
+	background: url(../image/bg1.jpg) left center no-repeat;
+}
+.cont>ul>li.active>a{
+	color: #000;
+	text-decoration: underline;
+}
+.contr{
+	width: 1000px;
+	float: right;
+}
+.contr a{
+	display: block;
+	float: left;
+	margin: 0 0 20px 20px;
+	overflow: hidden;
+}

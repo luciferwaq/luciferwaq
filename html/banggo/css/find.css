@@ -1,0 +1,113 @@
+.wrap{
+	width: 985px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo{
+	margin: 10px 0 24px;
+}
+.cont{
+	border: 1px solid #ccc;
+	overflow: hidden;
+	padding: 25px 40px 0;
+}
+.cont h3{
+	font-size: 16px;
+	border-bottom: 1px dotted #e6e6e6;
+	padding-left: 30px;
+	line-height: 32px;
+	color: #333;
+	margin-bottom: 30px;
+	background: url(../image/bg4.jpg) no-repeat left center;
+}
+.cont dl{
+	overflow: hidden;
+}
+.cont dl dt{
+	float: left;
+	width: 235px;
+	text-align: right;
+	line-height: 30px;
+	height: 60px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+}
+.cont dl dd{
+	float: left;
+	height: 30px;
+	color: #999;
+	line-height: 30px;
+	width: 600px;
+}
+.cont dl dd input{
+	height: 28px;
+	border:1px solid #ababab;
+}
+.cont dl.ways dd input{
+	height: 14px;
+}
+.cont p{
+	padding-left: 230px;
+}
+.cont dl.yan dd input{
+	float: left;
+}
+.cont dl.yan dd i{
+	display: block;
+	float: left;
+	width: 80px;
+	text-align: center;
+	font-style: normal;
+	font-size: 18px;
+	color: #000;
+	border:1px solid #000;
+	margin: 2px 5px 0;
+	height: 26px;
+	line-height: 26px;
+}
+#btn{
+	height: 32px;
+	width: 103px;
+	background: url(../image/bg3.jpg);
+	border:none;
+	border-radius: 5px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 5px;
+	cursor: pointer;
+	margin-bottom: 35px;
+}
+.footer{
+	text-align: center;
+	margin-top: 35px;
+}
+.footer a{
+	color: #000;
+}
+.bot{
+	position: absolute;
+	left: -810px;
+	bottom: 0;
+}
+.bot dl{
+	border-top: 1px solid #e8e8e8;
+}
+.bot dl dt{
+	float: left;
+	border-right: 1px solid #e8e8e8;
+}
+.bot dl dd{
+	float: left;
+	line-height: 64px;
+	color: #666;
+	margin: 0 1px;
+}
+.close{
+	cursor: pointer;
+	position: absolute;
+	top: -7px;
+	bottom: -7px;
+	border-radius: 50%;
+}

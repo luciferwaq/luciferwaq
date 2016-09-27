@@ -1,0 +1,159 @@
+.logo{
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+}
+.logoin{
+	width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.logoin img.step{
+	float: right;
+}
+.cont{
+	margin: 0 auto;
+	width: 1200px;
+	overflow: hidden;
+}
+.cont h3{
+	line-height: 26px;
+	background: url(../image/bg6.jpg) no-repeat left center;
+	padding:20px 0 20px 35px;
+}
+.cont h3 span{
+	float: right;
+	font-weight: normal; 
+}
+.mini1{
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+.mini1 dl{
+	overflow: hidden;
+}
+.mini1 dt{
+	float: left;
+	width: 40px;
+	height: 45px;
+	padding: 10px 10px 0;
+	background: #eee;
+	text-align: center;
+}
+.mini1 dd{
+	float: left;
+	padding: 5px 0 0 10px;
+}
+.cont table{
+	border: 1px solid #ccc;
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 1198px;
+	margin: 10px 0;
+}
+.cont th{
+	border: 1px solid #ccc;
+}
+.cont td{
+	border: 1px solid #ccc;
+	padding: 0 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+.cont td.tra{
+	width: 205px;
+	text-align: left;
+}
+.cont ul{
+	overflow: hidden;
+	width: 260px;
+}
+.cont li{
+	float: left;
+}
+.cont li.sec{
+	width: 180px;
+}
+.cont td span{
+	border: 1px solid #b0b0b0;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+}
+.cont td a{
+	color: #000;
+}
+.cont td i a{
+	font-style: normal;
+	text-decoration: underline;
+}
+#btnl,#btnr{
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border: none;
+	margin: 0 5px;
+}
+#btnl{
+	background: url(../image/bg7.jpg);
+}
+#btnr{
+	background: url(../image/bg8.jpg);
+}
+.cont p{
+	text-align: right;
+	line-height: 24px;
+}
+.cont p span{
+	float: left;
+}
+.cont p i{
+	font-size: 14px;
+	font-weight: bold;
+	color: #f00;
+	font-style: normal;
+}
+#btn{
+	width: 130px;
+	height: 45px;
+	line-height: 45px;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	background: #f00;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 3px;
+}
+.cont p a{
+	color: #000;
+}
+.mini2{
+	position: relative;
+	padding-left: 475px;
+	margin-top: 60px;
+	border-top: 2px solid #ccc;
+	font-weight: bold;
+}
+.mini2 ul{
+	color: #ccc;
+	position: absolute;
+	left: 0;
+	top: -24px;
+}
+.mini2 ul li{
+	padding: 0 30px 10px;
+	border-bottom: 2px solid #ccc;
+}
+.mini2 ul li.active{
+	border-color:#666;
+	color: #333;
+}
+.mini2 p{
+	text-align: left;
+	line-height: 20px;
+}
+.mini2 p.hide{
+	display: none;
+}

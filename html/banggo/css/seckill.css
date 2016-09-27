@@ -1,0 +1,123 @@
+.cont{
+	margin: 0 auto;
+	width: 1200px;
+	overflow: hidden;
+}
+.cont p{
+	margin-top: 25px;
+	font-size: 16px;
+	line-height: 28px;
+	color: #777;
+	overflow: hidden;
+}
+.cont p span{
+	display: block;
+	background-color: #f00;
+	color: #fff;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 3px;
+	float: left;
+}
+.cont p b{
+	font-size: 16px;
+	color: #000;
+}
+.cont p strong{
+	font-size: 22px;
+	color: #000;
+}
+.cont1 ul{
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+.cont1 ul li{
+	float: left;
+	padding: 0 45px;
+	width: 160px;
+	height: 60px;
+	font-size: 20px;
+	color: #777;
+	line-height: 50px;
+	cursor: pointer;
+}
+.cont1 ul li.li-active{
+	background: url(../image/bg12.jpg) top center no-repeat;
+	color: #fff;
+}
+.cont1 ol li{
+	float: left;
+}
+.cont2 ol{
+	overflow: hidden;
+	margin-top: 20px;
+}
+.cont2 ol li{
+	float: left;
+}
+.cont2 ol li dl{
+	width: 349px;
+	border: 1px solid #c2c2c2;
+	text-align: center;
+	border-right: none;
+}
+.cont2 ol li dl{
+	height: 348px;
+}
+.cont2 ol li dl dt{
+	text-align: center;
+	margin: 0 35px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #c2c2c2;
+}
+.cont2 ol li dl dt a{
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+.cont2 ol li dl dd{
+	font-size: 28px;
+	padding-top: 30px;
+	color: #f00;
+}
+.cont2 ol li dl dd span{
+	background-color: #f0f0f0;
+	line-height: 38px;
+	font-size: 16px;
+	color: #959595;
+	display: block;
+	margin-top: 30px;
+}
+.cont2 ol li dl dd span b{
+	font-size: 16px;
+}
+.cont3{
+	overflow: hidden;
+}
+.cont3 ul{
+	overflow: hidden;
+	float: left;
+}
+.cont3 ul li{
+	float: left;
+	margin: 20px 35px 0 0;
+	border: 1px solid #c2c2c2;
+}
+.cont3 ul li.li-sec{
+	margin-right: 0;
+}
+.cont ul li dd{
+	margin: 0 15px 15px;
+	background-color: #f0f0f0;
+	line-height: 36px;
+	color: #777;
+	text-align: center;
+	font-size: 16px;
+}
+.cont ul li dd b{
+	font-size: 16px;
+}

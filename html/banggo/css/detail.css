@@ -1,0 +1,125 @@
+.logo{
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+}
+.logoin{
+	width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.logoin img.step{
+	float: right;
+}
+.cont{
+	margin: 0 auto 190px;
+	width: 1200px;
+	overflow: hidden;
+}
+.cont h3{
+	line-height: 26px;
+	background: url(../image/bg5.jpg) no-repeat left center;
+	padding:20px 0 20px 35px;
+}
+.cont dl{
+	border: 1px solid #ccc;
+	margin-bottom: 15px;
+}
+.cont dl dt{
+	background:#eae7e4;
+	border-bottom: 1px solid #ccc;
+	line-height: 30px;
+	padding-left: 10px;
+}
+.cont dl dd{
+	line-height: 40px;
+	padding-left: 10px;
+}
+.cont table{
+	border: 1px solid #ccc;
+	border-spacing:0;
+	border-collapse:collapse;
+	width: 1198px;
+}
+.cont table tr td{
+	border: 1px solid #ccc;
+}
+.cont thead td{
+	background:#eae7e4;
+	line-height: 30px;
+	padding:0 10px;
+	font-weight: bold;
+}
+.cont thead td span{
+	float: right;
+}
+.cont thead td span a{
+	color: #000;
+	font-weight: normal;
+}
+.cont tbody td{
+	text-align: center;
+	vertical-align: middle;
+	line-height: 20px;
+}
+.cont tbody th{
+	text-align: center;
+	border: 1px solid #ccc;
+	line-height: 30px;
+}
+.cont tbody td.tra{
+	width: 253px;
+	padding: 0 20px;
+}
+.cont tbody td.tra li{
+	text-align: left;
+	float: left;
+}
+.cont tbody td.tra li.sec{
+	width: 190px;
+	line-height: 20px;
+	padding-top: 5px;
+}
+.cont p{
+	text-align: right;
+	line-height: 40px;
+}
+#btn{
+	width: 65px;
+	height: 30px;
+	border:none;
+	font-weight: bold;
+	line-height: 30px;
+	background: #484848;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.cont dl dd span{
+	color: #f00;
+	font-weight: bold;
+}
+.cont p.pse{
+	line-height: 20px;
+}
+.cont p span{
+	color: #f00;
+	font-size: 14px;
+	font-weight: bold;
+}
+.cont p.pse b{
+	color: #f00;
+	font-size: 20px;
+}
+#btn2{
+	background: #f00;
+	color: #fff;
+	height: 50px;
+	width: 150px;
+	line-height: 50px;
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 3px;
+	font-weight: bold;
+}

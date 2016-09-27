@@ -1,0 +1,118 @@
+.cont{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.contl{
+	width: 180px;
+	padding:10px 40px 0 0;
+	float: left;
+}
+.contl dl{
+	margin-bottom: 25px;
+}
+.contl dl dt{
+	font-size: 16px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #000;
+}
+.contl dl dd.hot{
+	background: url(../image/bg13.jpg) 60px center no-repeat;
+}
+.contl dl dd a{
+	line-height: 20px;
+	color: #000;
+}
+.contr{
+	float: right;
+	overflow: hidden;
+	width: 980px;
+	padding-top: 10px;
+}
+.contr ul{
+	width: 80px;
+	margin: 20px auto 15px;
+	overflow: hidden;
+}
+.contr ul li{
+	margin-right: 10px;
+	width: 30px;
+	height: 5px;
+	background: #eee;
+	cursor: pointer;
+	float: left;
+}
+.contr ul li.active{
+	background: #333;
+}
+.contr h2{
+	font-size: 20px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #000;
+}
+.contr li{
+	float: left;
+}
+.contr ol{
+	overflow: hidden;
+}
+.contr ol.ol-1 li{
+	margin: 10px 3px 0 0;
+}
+.contr ol.ol-2 li{
+	margin: 20px 0;
+}
+.contr ol.ol-3 li{
+	margin: 0 0 2px 2px;
+}
+.contr ol.ol-3 li.tit{
+	margin: 0;
+}
+.contr ol.ol-3 li.tit dl{
+	width: 199px;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+.contr ol.ol-3 li.tit dt{
+	background-color: #312f30;
+	text-align: center;
+	line-height: 29px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #e6e6e6;
+	margin-bottom: 2px;
+}
+.contr ol.ol-3 li.tit dd{
+	background-color: #e9e5e6;
+	overflow: hidden;
+	height: 406px;
+}
+.contr ol.ol-3 li.tit dd img{
+	float: left;
+}
+.contr ol.ol-3 li.tit dd a{
+	display: block;
+	width: 77px;
+	padding-left: 20px;
+	color: #000;
+	float: left;
+	line-height: 24px;
+}
+.contr ol.ol-3 li.tit dd a.a-hot{
+	background: url(../image/bg14.jpg) right center no-repeat;
+}
+.contr ol.ol-3 li.tit dd a.zn{
+	margin-bottom: 30px;
+}
+.contr ol.ol-4 li{
+	margin: 20px 20px 0 0;
+}
+.contr ol.ol-4 dl dd{
+	line-height: 20px;
+}
+.contr ol.ol-4 dl dd a{
+	color: #000;
+}
+.contr ol.ol-4 li.fourth{
+	margin-right: 0;
+}

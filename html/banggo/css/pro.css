@@ -1,0 +1,194 @@
+.cont{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.cont h2{
+	font-weight: normal;
+	padding: 30px 0 15px;
+}
+.cont1{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+.cont1 ul{
+	float: left;
+	width: 102px;
+}
+.cont1 ul li{
+	border: 1px solid #ccc;
+	margin: 0 10px 10px 0;
+	height: 90px;
+	cursor: pointer;
+}
+.cont1 ul li.active{
+	border: 1px solid #000;
+}
+.cont ul li img{
+	width: 90px;
+	height: 90px;
+}
+.now{
+	border: 1px solid #ccc;
+	cursor: crosshair;
+	float: left;
+	width: 498px;
+	height: 498px;
+	position: relative;
+	margin-right: 45px;
+}
+.now img{
+	width: 498px;
+	height: 498px;
+}
+.small{
+	position: absolute;
+	background: #fff;
+	opacity: .7;
+	filter: alpha(opacity=70);
+	width: 200px;
+	height: 200px;
+	left: 0;
+	top:0;
+	display: none;
+}
+.big{
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+	position: absolute;
+	left: 600px;
+	top: 0;
+	overflow: hidden;
+	display: none;
+}
+.big img{
+	width: 1245px;
+	height: 1245px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.mini{
+	float: left;
+}
+.mini p b{
+	line-height: 35px;
+	font-size: 16px;
+}
+.mini p span{
+	color: #666;
+}
+.mini p a.ar{
+	float: right;
+}
+.mini p a{
+	color: #000;
+	text-decoration: underline;
+}
+.mini p i{
+	font-style: normal;	
+}
+.mini ol{
+	width: 525px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.mini ol li{
+	float: left;
+	border: 1px solid #ccc;
+	margin:10px 10px 0 0;
+	cursor: pointer;
+}
+.mini ol li.active{
+	border: 1px solid #000;
+}
+.mini ol.prosize li{
+	line-height: 28px;
+	padding: 0 5px;
+}
+#btnl{
+	width: 20px;
+	height: 20px;
+	line-height: 12px;
+	text-align: center;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+#btnr{
+	width: 20px;
+	height: 20px;
+	line-height: 18px;
+	text-align: center;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 0;
+}
+#txt1{
+	width: 40px;
+	height: 18px;
+	border: 1px solid #ccc;
+	text-align: center;
+	padding: 0;
+	margin: 0 5px;
+}
+#btn1{
+	height: 34px;
+	width: 180px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	background: #f00;
+	border: none;
+	border-radius: 3px;
+	margin: 20px 0;
+	padding: 0;
+}
+#btn2{
+	padding: 0;
+	width: 100px;
+	height: 34px;
+	padding: 0 30px;
+	background: url(../image/bg9.jpg) 10px center no-repeat #fff;
+	border: 1px solid #e3e3e3;
+	margin: 20px 0;
+}
+p.share a{
+	margin-right: 5px;
+}
+.cont2{
+	overflow: hidden;
+	padding: 40px 200px 0 245px;
+}
+.cont2 dl dt{
+	padding:5px 5px;
+	border-bottom: 1px solid #000;
+	font-weight: bold;
+	font-size: 16px;
+	color: #4e4d49;
+	margin-bottom: 5px;
+}
+.cont2 dl dd{
+	line-height: 18px;
+	padding-left: 25px;
+	overflow: hidden;
+}
+.cont2 dl dd ul li{
+	float: left;
+	line-height: 25px;
+	width: 240px;
+}
+.cont2 dl dd ul{
+	margin:10px 0 25px;
+	overflow: hidden;
+}
+.cont2 dl dd ol li{
+	float: left;
+	width: 352px;
+	margin: 10px 20px 0 0;
+	line-height: 16px;
+}
+.cont2 dl dd ol li.dbltime{
+	margin: 0;
+}
