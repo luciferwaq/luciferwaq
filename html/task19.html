@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度前端技术学院任务十九</title>
+	<style>
+		html,body,div{
+			margin: 0;
+			padding: 0;
+		}
+		.wrap{
+			display: flex;
+			align-items: flex-end;
+			overflow: hidden;
+			height: 150px;
+		}
+		.wrap div{
+			margin-right: 1px;
+			width: 20px;
+			height: 50px;
+			color: #fff;
+			text-align: center;
+			background-color: #f00;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn1" value="左侧入">
+	<input type="button" id="btn2" value="右侧入">&emsp;&emsp;
+	<input type="button" id="btn3" value="左侧出">
+	<input type="button" id="btn4" value="右侧出">
+	<input type="button" id="btn5" value="排序">
+	<input type="button" id="btn6" value="随机">
+	<div class="wrap">
+	</div>
+	<script>
+		var txt = document.getElementById('txt');
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var btn3 = document.getElementById("btn3");
+		var btn4 = document.getElementById("btn4");
+		var btn5 = document.getElementById("btn5");
+		var btn6 = document.getElementById("btn6");
+		var wrap = document.getElementsByClassName("wrap")[0];
+		var arr = [];
+		function createDiv(){
+			if(arr.length == 60){
+				alert("不能超过60个");
+				return;
+			}
+			if (!(txt.value>9&&txt.value<101&&Math.floor(txt.value)==txt.value)) {
+				alert("请输入10-100之内的整数");
+				return;
+			}
+			var div = document.createElement("div");
+			div.style.height = txt.value + "px";
+			div.className = "innerDiv";
+			div.innerHTML = txt.value;
+			return div
+		}
+		function removeDiv(obj){
+			wrap.removeChild(obj);
+		}
+		function rand(min,max){
+			return Math.floor(Math.random()*(max-min+1)+min);
+		}
+		/*div排序*/
+		function sortDiv(){
+			/*排序时其他按钮不可用*/
+			btn1.disabled = true;
+			btn2.disabled = true;
+			btn3.disabled = true;
+			btn4.disabled = true;
+			btn6.disabled = true;
+			var allDiv = wrap.getElementsByTagName('div');
+			/*建立一个长度为91的数组，91即为10-100数字个数，
+			将盒子高度转化为新数组的下标，
+			再将下标输出，排序时，盒子背景不断改变*/
+			var arr1 = new Array(91);
+			var num = 0;
+			/*新数组起初全部为0*/
+			for(var i = 0;i < arr1.length;i++){
+				arr1[i] = 0;
+			}
+			/*下标为已有盒子高度的数字即+1*/
+			for(var j = 0;j < arr.length;j++){
+				arr1[arr[j]-10] += 1;
+			}
+			/*将下标重新输入到原来数组，直接从小到大排序*/
+			for(var k = 0;k < arr1.length;k++){
+				while(arr1[k] != 0){
+					arr1[k] -= 1;
+					arr[num] = k + 10;
+					num++;
+				}
+			}
+			time1 = setInterval(function(){
+				for(var m = 0;m < arr.length;m++){
+					allDiv[m].style.backgroundColor = 'rgb('+rand(0,255)+','+rand(0,255)+','+rand(0,255)+')';
+				}
+			},200)
+			var index = 0;
+			/*将盒子高度逐个改变*/
+			time2 = setInterval(function(){
+				allDiv[index].style.height = arr[index] + "px";
+				allDiv[index].innerHTML = arr[index];
+				index++;
+				if(index == arr.length){
+					clearInterval(time1);
+					clearInterval(time2);
+					btn1.disabled = false;
+					btn2.disabled = false;
+					btn3.disabled = false;
+					btn4.disabled = false;
+					btn6.disabled = false;
+				}
+			},500)
+		}
+		/*随机产生60个div*/
+		function randDiv(){
+			/*重置数组和div个数*/
+			wrap.innerHTML = '';
+			arr = [];
+			for(var i = 0;i < 60;i++){
+				var num = rand(10,100);
+				var div = document.createElement("div");
+				div.style.height = num + "px";
+				div.className = "innerDiv";
+				div.innerHTML = num;
+				wrap.appendChild(div);
+				arr.push(num);
+			}
+		}
+		/*建立一个数组arr,将盒子高度存入，以便排序*/
+		function btnOnClick(){
+			btn1.onclick = function(){
+				wrap.insertBefore(createDiv(),wrap.firstChild);
+				arr.unshift(Number(txt.value));
+			}
+			btn2.onclick = function(){
+				createDiv;
+				wrap.appendChild(createDiv());
+				arr.push(Number(txt.value));
+			}
+			btn3.onclick = function(){
+				alert(arr[0]);
+				removeDiv(wrap.firstElementChild);
+				arr.shift();
+			}
+			btn4.onclick = function(){
+				alert(arr[arr.length-1]);
+				removeDiv(wrap.lastElementChild);
+				arr.pop();
+			}
+			btn5.onclick = sortDiv;
+			btn6.onclick = randDiv;
+		}
+		function init(){
+			btnOnClick();
+			wrap.addEventListener("click",function(e){
+				if(e.target.className == "innerDiv"){
+					removeDiv(e.target);
+				}
+			})
+		}
+		init();
+	</script>
+</body>
+</html>
