@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度前端技术学院任务二十一</title>
+	<style>
+		html,body,div{
+			margin: 0;
+			padding: 0;
+		}
+		.wrap{
+			display: flex;
+			flex-wrap:wrap;
+			height: 150px;
+		}
+		.tag:after{
+			display:block; 
+			content:"clear"; 
+			height:0; 
+			clear:both; 
+			overflow:hidden; 
+			visibility:hidden;
+		}
+		.tag div{
+			min-width: 100px;
+			height: 100px;
+			line-height: 100px;
+			font-size: 20px;
+			text-align: center;
+			background: lightblue;
+			float: left;
+			margin: 0 5px;- 
+		}
+		.like div{
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			font-size: 20px;
+			text-align: center;
+			background: lightblue;
+			float: left;
+			margin: 0 5px;- 
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="tag" id="txt1">
+	<div class="tag">
+	</div>
+	<textarea name="" id="txt2" cols="30" rows="5"></textarea>
+	<input type="button" id="btn" value="添加兴趣爱好">
+	<div class="like"></div>
+	<script>
+		var txt1 = document.getElementById('txt1');
+		var txt2 = document.getElementById('txt2');
+		var btn = document.getElementById('btn');
+		var tag = document.getElementsByClassName('tag')[0];
+		var like = document.getElementsByClassName('like')[0];
+		var arr1 = [];
+		var arr2 = [];
+		function SmallTag(str,parentDiv,arr){
+			this.inner = str;
+			this.parentDiv = parentDiv;
+			this.arr = arr;
+			this.createDiv();
+		}
+		SmallTag.prototype = {
+			createDiv: function(){
+				this.ele = document.createElement("div");
+				this.ele.innerHTML = this.inner;
+				this.parentDiv.appendChild(this.ele);
+				this.deleteTip(this.ele);
+				this.deleteTag(this.ele);
+			},
+			deleteTip:function(obj){
+				var str = obj.innerHTML;
+				obj.onmouseenter = function(){
+					obj.innerHTML = '删除：' + str;
+				}
+				obj.onmouseleave = function(){
+					obj.innerHTML = str;
+				}
+			},
+			deleteTag:function(obj){
+				var that = this;
+				obj.onclick = function(){
+					that.parentDiv.removeChild(obj);
+					that.arr.splice(that.arr.indexOf(that.inner),1)
+				}
+			}
+		}
+		txt1.onkeyup = function(e){
+			var reg = /[,，;；、\s\n]+/;
+			var str = txt1.value.split(reg)[0].trim();
+			if(reg.test(txt1.value)||e.keyCode == 13){
+				if(txt1.value.search(reg) == 0||txt1.value == ''||arr1.indexOf(str)!=-1){
+					txt1.value = '';
+					return;
+				}
+				arr1.push(str);
+				if (arr1.length>10) {
+					arr1.shift();
+					tag.removeChild(tag.firstElementChild);
+				};
+				txt1.value = '';
+				var oTag = new SmallTag(str,tag,arr1);
+			}
+		}
+		btn.onclick = function(){
+			var reg = /[,，;；、\s\n]+/;
+			var str = txt2.value.trim();
+			if(txt2.value.search(reg) == 0||txt2.value == ''){
+				txt2.value = '';
+				return;
+			}
+			var arr3 = str.split(reg).filter(function(e){
+				if(e != null && e.length > 0){
+					return true;
+				}else{
+					return false;
+				}
+			})
+			arr3.forEach(function(e){
+				if(arr2.indexOf(e) == -1){
+					arr2.push(e);
+					if(arr2.length>10){
+						arr2.shift();
+						like.removeChild(like.firstElementChild);
+					}
+					var oTag = new SmallTag(e,like,arr2);
+				}
+			});
+			txt2.value = '';
+		}
+	</script>
+</body>
+</html>
