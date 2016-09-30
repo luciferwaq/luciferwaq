@@ -161,6 +161,7 @@
 			btnOnClick();
 			wrap.addEventListener("click",function(e){
 				if(e.target.className == "innerDiv"){
+					arr.splice(arr.indexOf(Number(e.target.innerHTML)),1);
 					removeDiv(e.target);
 				}
 			})
