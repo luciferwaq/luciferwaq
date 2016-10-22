@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 960px;
+            height: 540px;
+            margin: 100px auto 0;
+            border: 1px solid #000;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        ul {
+            list-style: none;
+            width: 240px;
+            height: 540px;
+            transform-style: preserve-3d;
+            position: relative;
+            float: left;
+            transition: all 2s ease-in-out;
+        }
+        ul li {
+            width: 240px;
+            height: 540px;
+            position: absolute;
+        }
+        ul li:nth-child(1){
+            transform: translateZ(270px);
+            background: url("image/pic11.jpg") left top no-repeat;
+            background-size:400%;
+        }
+        ul li:nth-child(2){
+            transform: translateY(-270px) rotateX(90deg);
+            background: url("image/pic12.jpg");
+            background-size:400%;
+        }
+        ul li:nth-child(3){
+            transform: translateZ(-270px) rotateX(180deg);
+            background: url("image/pic13.jpg");
+            background-size:400%;
+        }
+        ul li:nth-child(4){
+            transform: translateY(270px) rotateX(-90deg);
+            background: url("image/pic14.jpg");
+            background-size:400%;
+        }
+        #ul2 {
+            transition: all 2s ease-in-out .1s;
+        }
+        #ul3 {
+            transition: all 2s ease-in-out .2s;
+        }
+        #ul4 {
+            transition: all 2s ease-in-out .3s;
+        }
+        #ul2 li {
+            background-position: -240px;
+        }
+        #ul3 li {
+            background-position: -480px;
+        }
+        #ul4 li {
+            background-position: -720px;
+        }
+        ol {
+            list-style: none;
+            width: 120px;
+            height: 25px;
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+            z-index: 99;
+            transform: translateZ(300px);
+        }
+        ol li {
+            float: left;
+            margin-right: 5px;
+            border-radius: 50%;
+            height: 25px;
+            width: 25px;
+            background: rgba(0,0,0,.5);
+            text-align: center;
+            line-height: 25px;
+            color: #fff;
+        }
+        ol li.active{
+            background: #f0c600;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <ul id="ul1">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul id="ul2">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul id="ul3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul id="ul4">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </section>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        var page = 1;
+        $("ol li").click(function () {
+            if($("ul").attr("data-rx")){
+                var rx = -($(this).index()+1-page)*90 + Number($("ul").attr("data-rx"));
+            } else {
+                var rx = -($(this).index()+1-page)*90;
+            }
+            $("ul").attr("data-rx",rx);
+            page = $(this).index()+1;
+            $("ul").css("transform","rotateX("+rx+"deg)");
+            $(this).siblings().removeClass().end().addClass("active");
+        })
+    </script>
+</body>
+</html>
