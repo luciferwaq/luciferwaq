@@ -86,8 +86,8 @@
                     };
                     $scope.save = function () {
                         var a = new Date();
-                        var hours = a.getHours()>10? a.getHours():'0'+ a.getHours();
-                        var minutes = a.getMinutes()>10? a.getMinutes():'0'+ a.getMinutes();
+                        var hours = a.getHours()>9? a.getHours():'0'+ a.getHours();
+                        var minutes = a.getMinutes()>9? a.getMinutes():'0'+ a.getMinutes();
                         var ntime = a.getFullYear().toString().slice(2) + "/" + (a.getMonth() + 1) + "/" + a.getDate() + " " + hours + ":" + minutes;
                         if($scope.datajson.length !== 0){
                             var nid = $scope.datajson[$scope.datajson.length - 1].id + 1;
