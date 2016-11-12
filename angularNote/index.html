@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title></title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.2.16/angular-route.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <header>My Notebook</header>
+    <div class="main container" ng-controller="myctrl">
+        <div class="left col-sm-3">
+            <div class="menu">
+                <dl>
+                    <dt>
+                        <input type="button" class="new-btn btn btn-primary" value="new" ng-click="$location.path('view/0')"/>
+                        My Notes
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li ng-repeat="x in datajson" ng-click="$location.path('cont/'+datajson[$index].id)">
+                                <p>{{x.title}}</p>
+                                <p>{{x.date}}</p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="right col-sm-9">
+            <section ng-view class="col-xs-12 csec">
+
+            </section>
+        </div>
+    </div>
+    <p>{{datajson}}</p>
+    <script>
+        angular.module("myapp",["ngRoute"])
+                .controller("myctrl",["$scope","$location", function ($scope,$location) {
+                    $scope.datajson = [
+                        {"id":0,"title":"1111","content":"11111111","date":"16/11/11 16:59"}
+                    ];
+                    $scope.$location = $location;
+                }])
+                .config(["$routeProvider", function ($routeProvider) {
+                    $routeProvider
+                            .when("/view/:id",{
+                                templateUrl:"new.html",
+                                controller:"newctrl"
+                            })
+                            .when("/cont/:id",{
+                                templateUrl:"cont.html",
+                                controller:"contrl"
+                            })
+                            .otherwise({
+                                redirectTo:"/view/0"
+                            })
+                }])
+                .controller("newctrl",["$scope","$routeParams", function ($scope,$routeParams) {
+                    if($routeParams.id != 0){
+                        angular.forEach($scope.datajson, function (value,key) {
+                            if((value.id + 1) == $routeParams.id){
+                                $scope.txt = $scope.datajson[key].content;
+                                $scope.title = $scope.datajson[key].title;
+                                $scope.deshow = true;
+                                $scope.contfill = false;
+                            }
+                        })
+                    }else{
+                        $scope.txt = '';
+                        $scope.title = '';
+                        $scope.deshow = false;
+                        $scope.contfill = true;
+                    }
+                    $scope.fill = function () {
+                        if($scope.title&&$scope.txt){
+                            $scope.contfill = false;
+                        }else{
+                            $scope.contfill = true;
+                        }
+                    };
+                    $scope.save = function () {
+                        var a = new Date();
+                        var hours = a.getHours()>10? a.getHours():'0'+ a.getHours();
+                        var minutes = a.getMinutes()>10? a.getMinutes():'0'+ a.getMinutes();
+                        var ntime = a.getFullYear().toString().slice(2) + "/" + (a.getMonth() + 1) + "/" + a.getDate() + " " + hours + ":" + minutes;
+                        if($scope.datajson.length !== 0){
+                            var nid = $scope.datajson[$scope.datajson.length - 1].id + 1;
+                        }else {
+                            var nid = 0;
+                        }
+                        $scope.xdata = {"id":nid,"content":$scope.txt,"title":$scope.title,"date": ntime};
+                        if(Number($routeParams.id) === 0){
+                            $scope.datajson.push($scope.xdata);
+                            $scope.$location.path("cont/" + nid);
+                        }else{
+                            angular.forEach($scope.datajson, function (value) {
+                                if((value.id + 1) == $routeParams.id){
+                                    value.content = $scope.txt;
+                                    value.title = $scope.title;
+                                    value.date = ntime;
+                                    $scope.$location.path('cont/' + value.id);
+                                }
+                            });
+                        }
+                    };
+                    $scope.delete = function () {
+                        angular.forEach($scope.datajson, function (value,key) {
+                            if((value.id + 1) == $routeParams.id){
+                                $scope.datajson.splice(key,1);
+                            }
+                        });
+                        $scope.$location.path("view/0")
+                    }
+                }])
+                .controller("contrl",["$scope","$routeParams","$location", function ($scope,$routeParams,$location) {
+                    angular.forEach($scope.datajson, function (value,key) {
+                        if(value.id == $routeParams.id){
+                            $scope.nowTime = $scope.datajson[key].date;
+                            $scope.nowTitle = $scope.datajson[key].title;
+                            $scope.nowCont = $scope.datajson[key].content;
+                            $scope.nowId = $scope.datajson[key].id + 1;
+                            $scope.$location = $location;
+                        }
+                    })
+                }])
+    </script>
+</body>
+</html>

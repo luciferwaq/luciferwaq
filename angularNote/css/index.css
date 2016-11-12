@@ -1,0 +1,134 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+header {
+    width: 100%;
+    background: #eee;
+    height: 55px;
+    line-height: 55px;
+    font-size: 20px;
+    padding-left: 6%;
+}
+.main {
+    width: 90%;
+    height: 70%;
+    margin: 30px auto 0;
+}
+.left {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.right {
+    height: 100%;
+}
+.menu {
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+.menu dt {
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    padding: 0 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+}
+.menu dd {
+    margin: 10px 15px 0;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+.menu li {
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+    width: 100%;
+}
+.menu li:last-child {
+    border: none;
+}
+.menu li p {
+    margin: 0 0 0 5px;
+}
+.new-btn {
+    float: right;
+    height: 30px;
+    width: 40px;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 15px;
+}
+.cont {
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 0;
+}
+section.csec {
+    height: 100%;
+    padding: 0;
+}
+.mytitle {
+    background: #eee;
+    border-bottom: 1px solid #999;
+    padding: 10px 0;
+    height: 50px;
+    width: 100%;
+    text-indent: 20px;
+}
+.mytitle input {
+    width: 95%;
+    margin-right: 2.5%;
+    border-radius: 5px;
+    padding: 0;
+    border:1px solid #999;
+    height: 30px;
+    text-indent: 10px;
+}
+.mytitle input.edit-btn {
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    text-indent: 0;
+    float: right;
+    margin-right: 10px;
+}
+.innercont {
+    margin: 15px;
+}
+.cont-left,
+.cont-right{
+    height: 80%;
+    margin-bottom: 20px;
+}
+.cont-left textarea {
+    border-radius: 5px;
+    padding: 5px 10px;
+    height: 100%;
+    width: 100%;
+}
+.cont-right textarea {
+    border-radius: 5px;
+    background: #eee;
+    overflow: scroll;
+    padding: 5px 10px;
+    height: 100%;
+    width: 100%;
+}
+.cont-footer {
+    height: 50px;
+    background: #eee;
+    border-top: 1px solid #999;
+    border-radius: 5px;
+    line-height: 50px;
+    text-indent: 20px;
+}
+.cont-footer .save-btn {
+    margin: 5px 10px;
+    float: left;
+}
+.delete-btn {
+    margin: 5px 10px 5px 0;
+    float: right;
+}

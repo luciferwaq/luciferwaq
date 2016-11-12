@@ -1,0 +1,18 @@
+<div class="cont col-xs-12">
+    <div class="mytitle">
+        <input id="title-txt" type="text" placeholder="New Note" ng-model="title" ng-change="fill()"/>
+    </div>
+    <div class="cont-left col-sm-6">
+        <h3>Editor</h3>
+        <textarea  cols="25" rows="21" placeholder="Note Content" ng-model="txt" ng-change="fill()"></textarea>
+    </div>
+    <div class="cont-right col-sm-6">
+        <h3>Preview</h3>
+        <textarea cols="25" rows="20" ng-bind="txt" readonly></textarea>
+    </div>
+    <div class="clearfix"></div>
+    <div class="cont-footer">
+        <input type="button" class="delete-btn btn btn-danger" value="delete" ng-show="deshow" ng-click="delete()"/>
+        <input type="button" class="save-btn btn btn-primary" value="save" ng-disabled="contfill" ng-click="save()"/>
+    </div>
+</div>
